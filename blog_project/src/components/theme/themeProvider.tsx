@@ -21,7 +21,12 @@ const ThemeProvider: React.FC<themeProviderProps> = ({
   return (
     <NextThemeProvider {...props}>
       <Header />
-      <main className={cn("container mx-auto px-4", containerClassName)}>
+      <main
+        className={cn(
+          "container mx-auto flex min-h-0 flex-1 flex-col px-4",
+          containerClassName,
+        )}
+      >
         {children}
       </main>
       <Footer />
